@@ -22,15 +22,12 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Início", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Sobre", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Sobre", "Sobre", "Home")</li>
+                    <li>@Html.ActionLink("Contato", "Contatos", "Home")</li>
                 </ul>
             </div>
         </div>
     </div>
-    <a href="https://google.com" target="_blank">Ir para o Google</a><br>
-    @Html.ActionLink("Inicial", "Index", "Home");<br>
-    @Html.ActionLink("Contatos", "Contatos", "Home");<br>
     <div class="container body-content">
         @RenderBody()
         <hr />
