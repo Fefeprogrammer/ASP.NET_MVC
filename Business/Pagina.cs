@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,23 @@ namespace Business
 
         public List<Pagina> Lista()
         {
-            var paginaOb = new DataBase.Pagina();
+            var lista = new List<Pagina>();
+            var paginaDb = new DataBase.Pagina();
+
+            foreach (DataRow row in paginaDb.Lista().Rows)
+            {
+                var pagina = new Pagina();
+                pagina.Id = Convert.ToInt32(row["id"]);
+                pagina.Nome = Convert.ToString(row["nome"]);
+                pagina.Conteudo = (row["conteudo"]).ToString();
+                pagina.Data = Convert.ToDateTime(row["data"]);
+
+                lista.Add(pagina);
+            }
+            return lista;
         }
     }
 }
+        
+    
+

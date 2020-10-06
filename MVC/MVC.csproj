@@ -127,6 +127,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\homeController.cs" />
+    <Compile Include="Controllers\paginasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -168,6 +169,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Contatos.cshtml" />
     <Content Include="Views\Home\Sobre.cshtml" />
+    <Content Include="Views\Paginas\Index.cshtml" />
+    <Content Include="Views\Paginas\Novo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -185,6 +188,12 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{3e3e3734-9108-4804-995e-7ac1105e8e3d}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

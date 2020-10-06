@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "IndexTeste";
+    List<Business.Pagina> pagina = ViewBag.Pagina;
+}
+
+<div class="jumbotron">
+    <h3>Páginas</h3>
+    <div>
+        <a href="/paginas/novo" class="btn btn-default">Nova Página</a>
+    </div>
+    <table class="table">
+        <tr>
+            <td>ID</td>
+            <td>NOME</td>
+            <td>DATA</td>
+        </tr>
+        @foreach (var p in pagina)
+        {
+            <tr>
+                <td>@p.Id</td>
+                <td>@p.Nome</td>
+                <td>@p.Data</td>
+            </tr>
+        }
+    </table>
+</div>

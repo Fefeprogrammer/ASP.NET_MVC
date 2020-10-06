@@ -46,11 +46,5 @@
     <Compile Include="Pagina.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Business\Business.csproj">
-      <Project>{3e3e3734-9108-4804-995e-7ac1105e8e3d}</Project>
-      <Name>Business</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -20,6 +20,18 @@ namespace MVC
             );
 
             routes.MapRoute(
+                "paginas",
+                "paginas",
+                defaults: new { controller = "Paginas", action = "Index" }
+            );
+
+            routes.MapRoute(
+                "pagina_novo",
+                "pagina/novo",
+                defaults: new { controller = "Paginas", action = "Novo" }
+            );
+
+            routes.MapRoute(
                 "contact",
                 "contact",
                 defaults: new { controller = "Home", action = "Contatos" }

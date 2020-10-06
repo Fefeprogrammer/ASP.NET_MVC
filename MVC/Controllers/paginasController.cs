@@ -7,9 +7,9 @@ using System.Web.Mvc;
 
 namespace MVC.Controllers
 {
-    public class HomeController : Controller
+    public class paginasController : Controller
     {
-        // GET: home
+        // GET: pagina
         public ActionResult Index()
         {
             ViewBag.Pagina = new Pagina().Lista();
